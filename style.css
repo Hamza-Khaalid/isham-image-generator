@@ -1,0 +1,169 @@
+body {
+  margin: 0;
+  padding: 0;
+  background: #0a0a1f;
+  font-family: "Segoe UI", sans-serif;
+  color: #fff;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.silkscreen-regular {
+  font-family: "Silkscreen", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.silkscreen-bold {
+  font-family: "Silkscreen", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+h1 {
+  font-family: "Silkscreen", sans-serif; /* Using the Supercharge font */
+  font-size: 4rem;
+  color: #00a8ff; /* Light neon blue */
+  text-shadow: 0 0 10px rgba(0, 168, 255, 0.5),
+    /* Soft neon blue glow */ 0 0 20px rgba(0, 168, 255, 0.3),
+    /* Extended glow */ 0 0 40px rgba(0, 168, 255, 0.15); /* Very subtle outer glow */
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  animation: smooth-glow 3s ease-in-out infinite alternate;
+}
+
+@keyframes smooth-glow {
+  0% {
+    text-shadow: 0 0 10px rgba(0, 168, 255, 0.5),
+      0 0 20px rgba(0, 168, 255, 0.3), 0 0 40px rgba(0, 168, 255, 0.15);
+  }
+  100% {
+    text-shadow: 0 0 20px rgba(0, 168, 255, 0.7),
+      0 0 40px rgba(0, 168, 255, 0.5), 0 0 60px rgba(0, 168, 255, 0.3);
+  }
+}
+
+.container {
+  width: 90%;
+  max-width: 800px;
+  margin: 2rem auto;
+}
+
+.generator {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  padding: 2rem;
+  box-shadow: 0 0 30px rgba(0, 128, 255, 0.2);
+  overflow: hidden;
+  text-align: center;
+}
+
+input {
+  width: 95%;
+  padding: 1rem;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(0, 128, 255, 0.3);
+  border-radius: 10px;
+  color: #fff;
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+input:focus {
+  outline: none;
+  border-color: rgba(0, 128, 255, 0.8);
+  box-shadow: 0 0 15px rgba(0, 128, 255, 0.3);
+}
+
+button {
+  background: linear-gradient(45deg, #00a8ff, #0063ff);
+  border: none;
+  padding: 1rem 2rem;
+  color: #fff;
+  font-size: 1.1rem;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+button:hover {
+  /* transform: translateY(-2px); */
+  box-shadow: 0 5px 15px rgba(0, 128, 255, 0.4);
+}
+
+.output {
+  margin-top: 2rem;
+  min-height: 300px;
+  background: rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  overflow: hidden;
+  position: relative;
+}
+
+.image-container {
+  position: relative;
+  display: inline-block;
+  border-radius: 10px;
+}
+
+.image-container img {
+  border-radius: 10px;
+  max-width: 100%;
+  display: block;
+}
+
+.download-icon {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  background: rgba(0, 0, 0, 0.6);
+  border-radius: 50%;
+  padding: 10px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.3s ease;
+}
+
+.download-icon:hover {
+  background: rgba(0, 128, 255, 0.8);
+}
+
+.download-icon svg {
+  width: 20px;
+  height: 20px;
+  fill: #fff;
+}
+
+.spinner {
+  width: 60px;
+  height: 60px;
+  border: 6px solid rgba(255, 255, 255, 0.2);
+  border-top-color: #00a8ff;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+.timer {
+  margin-top: 10px;
+  font-size: 1.2rem;
+  color: #00a8ff;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
